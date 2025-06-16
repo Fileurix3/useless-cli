@@ -50,9 +50,11 @@ Repository with useless CLI
 1. `--calc, -c`:
 
    Simple calculator that supports `-, +, /, *, ()` with only logical operators inside: `AND, OR, XOR, NOT`
+
    **Example cli:** `--calc "2 + (2 + 2) * 2`
 
 2. `--xorshift, -x`:
 
    Generate pseudo random number use XORShift, you must specify a number between 0 and 255,
+
    **Example cli:** `--xorshift 10`
