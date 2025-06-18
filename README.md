@@ -58,3 +58,11 @@ Repository with useless CLI
    Generate pseudo random number use XORShift, you must specify a number between 0 and 255,
 
    **Example cli:** `--xorshift 10`
+
+3. Random data generate
+
+   1. `--password, -p`
+
+      Generate random password: `-p <LENGTH> -p <COUNT>`
+
+      **Example cli:** `--password 20 --password 10`
