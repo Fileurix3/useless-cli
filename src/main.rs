@@ -16,7 +16,12 @@ struct Args {
     )]
     xorshift: Option<u8>,
 
-    #[arg(short, long)]
+    #[arg(
+        short,
+        long,
+        value_name = "LENGTH",
+        help = "Generate random passwords (e.g. --password <LENGTH> --password <COUNT>)"
+    )]
     password: Option<Vec<u8>>,
 }
 
@@ -34,7 +39,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     if args.password.is_some() {
         let data = args.password.unwrap();
-        utils::rand_data::rand_password(data[0], data[1])?;
+        utils::rand_data::rand_password(data[0], data.get(1).copied().unwrap_or(1))?;
     }
 
     Ok(())
